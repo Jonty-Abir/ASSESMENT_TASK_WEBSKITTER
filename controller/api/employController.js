@@ -1,7 +1,7 @@
 const { Validator } = require("node-input-validator");
 const { EmployModel } = require("../../model/api/employSchema");
 
-async function create(req, res) {
+async function createEmploy(req, res) {
   const rules = {
     name: "required|string|minLength:3",
     userName: "required|string|minLength:3",
@@ -65,4 +65,4 @@ async function getAllEmploy(req, res) {
   }
 }
 
-module.exports = { create, getAllEmploy };
+module.exports = { createEmploy, getAllEmploy };
